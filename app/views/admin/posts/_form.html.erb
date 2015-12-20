@@ -1,0 +1,5 @@
+<%= bootstrap_form_for [:admin, @post] do |e| %>
+	<%= e.text_field :title %>
+	<%= e.text_area :content %>
+	<%= e.submit '送出' %>
+<% end %>

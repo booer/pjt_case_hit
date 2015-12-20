@@ -6,11 +6,45 @@
     <div class="contentpanel">
 
       <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li><a href="buttons.html">商品管理</a></li>
+        <li><i class="fa fa-home mr5"></i> Home</li>
+        <li>商品管理</li>
+        <li><%= link_to '新增產品', new_admin_product_path %></li>
       </ol>
-      <%= link_to '新增產品', new_admin_product_path %>
+        
       <!-- content goes here... -->
+      <div class="panel">            
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-hover nomargin">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="text-right">date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @products.each do |f| %>
+                <tr>
+                  <td><%= f.pname %></td>
+                  <td class="text-right"><%= f.updated_at %></td>
+                  <td>
+                    <ul class="table-options">
+                      <li>
+                      <%= link_to edit_admin_product_path(f.id) do %><i class="fa fa-pencil"></i><% end %>
+                      </li>
+                      <li>
+                      <%= link_to admin_product_path(f.id), method: :'DELETE' do %><i class="fa fa-trash"></i><% end %>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div><!-- table-responsive -->
+        </div>
+      </div>
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->
 </section>

@@ -8,7 +8,7 @@ class Admin::ProductsController < Admin::BaseController
 	def create
 		@product = Product.new(product_params)
 		if @product.save
-			redirect_to amdin_product_path
+			redirect_to admin_products_path
 		else
 			render :new
 		end
@@ -18,6 +18,8 @@ class Admin::ProductsController < Admin::BaseController
 	end
 	def destroy
 		@product = Product.find(params[:id])
+		@product.destroy
+		redirect_to admin_products_path
 	end
 	def edit
 		@product = Product.find(params[:id])
@@ -25,7 +27,7 @@ class Admin::ProductsController < Admin::BaseController
 	def update
 		@product = Product.find(params[:id])
 		if @product.update(product_params)
-			redirect_to amdin_product_path
+			redirect_to admin_products_path
 		else
 			render :edit
 		end
@@ -33,6 +35,6 @@ class Admin::ProductsController < Admin::BaseController
 	
 	private
 	def product_params
-		require(:prodcut)
+		params.require(:product).permit(:pname, :desc)
 	end
 end	

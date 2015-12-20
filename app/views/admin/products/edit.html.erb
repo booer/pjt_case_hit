@@ -6,11 +6,11 @@
     <div class="contentpanel">
 
       <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="index.html"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li><a href="buttons.html">商品管理</a></li>
-        <li><a href="buttons.html">修改</a></li>
+        <li><i class="fa fa-home mr5"></i> Home</li>
+        <li>商品管理</li>
+        <li>修改產品</li>
       </ol>
-      <%= link_to '新增產品', new_admin_product_path %>
+      <%= render 'form' %>
       <!-- content goes here... -->
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->

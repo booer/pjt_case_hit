@@ -8,7 +8,7 @@ class Admin::PostsController < Admin::BaseController
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to admin_post_path
+			redirect_to admin_posts_path
 		else
 			render :new
 		end
@@ -19,7 +19,7 @@ class Admin::PostsController < Admin::BaseController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to admin_post_path
+		redirect_to admin_posts_path
 	end
 	def edit
 		@post = Post.find(params[:id])
@@ -27,7 +27,7 @@ class Admin::PostsController < Admin::BaseController
 	def update
 		@post = Post.find(params[:id])
 		if @post.update(post_params)
-			redirect_to admin_post_path
+			redirect_to admin_posts_path
 		else
 			render :new
 		end
