@@ -1,0 +1,138 @@
+<div class="leftpanel">
+  <div class="leftpanelinner">
+
+    <!-- ################## LEFT PANEL PROFILE ################## -->
+
+    <ul class="nav nav-tabs nav-justified nav-sidebar">
+      <li class="tooltips active" data-toggle="tooltip" title="Main Menu"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
+      <li class="tooltips unread" data-toggle="tooltip" title="Check Mail"><a data-toggle="tab" data-target="#emailmenu"><i class="tooltips fa fa-envelope"></i></a></li>
+      <li class="tooltips" data-toggle="tooltip" title="Contacts"><a data-toggle="tab" data-target="#contactmenu"><i class="fa fa-user"></i></a></li>
+      <li class="tooltips" data-toggle="tooltip" title="Settings"><a data-toggle="tab" data-target="#settings"><i class="fa fa-cog"></i></a></li>
+      <li class="tooltips" data-toggle="tooltip" title="Log Out">
+        <%= link_to admin_login_path do %><i class="fa fa-sign-out"></i><% end %>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      <!-- ################# MAIN MENU ################### -->
+
+      <div class="tab-pane active" id="mainmenu">
+        <h5 class="sidebar-title">動態頁面</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk">
+          <li>
+            <%= link_to admin_posts_path do %><i class="fa fa-map-marker"></i> <span>文章分類</span><% end %>
+          </li>
+          <li>
+            <%= link_to admin_posts_path do %><i class="fa fa-home"></i> <span>新增文章</span><% end %>
+          </li>
+          <li>
+            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>商品管理</span><% end %>
+          </li>
+        </ul>
+        <h5 class="sidebar-title">靜態頁面</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk">
+          <li class="nav-parent active"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
+            <ul class="children">
+              <li> <%= link_to '首頁', admin_wellcome_path  %></li>
+              <li> <%= link_to '關於我們', admin_about_path  %></li>
+              <li> <%= link_to '頁面擴充', admin_contact_path  %></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- tab-pane -->
+
+      <!-- ######################## EMAIL MENU ##################### -->
+
+      <div class="tab-pane" id="emailmenu">
+        <div class="sidebar-btn-wrapper">
+          <a class="btn btn-danger btn-block">Compose</a>
+        </div>
+
+        <h5 class="sidebar-title">Mailboxes</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk nav-mail">
+          <li><a><i class="fa fa-inbox"></i> <span>Inbox (3)</span></a></li>
+          <li><a><i class="fa fa-pencil"></i> <span>Draft (2)</span></a></li>
+          <li><a><i class="fa fa-paper-plane"></i> <span>Sent</span></a></li>
+        </ul>
+
+        <h5 class="sidebar-title">Tags</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk nav-label">
+          <li><a href="#"><i class="fa fa-tags primary"></i> <span>Communication</span></a></li>
+          <li><a href="#"><i class="fa fa-tags success"></i> <span>Updates</span></a></li>
+          <li><a href="#"><i class="fa fa-tags warning"></i> <span>Promotions</span></a></li>
+          <li><a href="#"><i class="fa fa-tags danger"></i> <span>Social</span></a></li>
+        </ul>
+      </div><!-- tab-pane -->
+
+      <!-- ################### CONTACT LIST ################### -->
+
+      <div class="tab-pane" id="contactmenu">
+        <h5 class="sidebar-title">管理員們</h5>
+        <ul class="media-list media-list-contacts">
+          <li class="media">
+            <a href="#">
+              <div class="media-left">
+                <img class="media-object img-circle" src="../images/photos/user1.png" alt="">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">jared</h4>
+                <span><i class="fa fa-phone"></i>系統維護</span>
+              </div>
+            </a>
+          </li>
+          <li class="media">
+            <a href="#">
+              <div class="media-left">
+                <img class="media-object img-circle" src="../images/photos/user1.png" alt="">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">業主-</h4>
+                <span><i class="fa fa-phone"></i>業主</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div><!-- tab-pane -->
+
+      <!-- #################### SETTINGS ################### -->
+
+      <div class="tab-pane" id="settings">
+        <h5 class="sidebar-title">基本設定</h5>
+        <ul class="list-group list-group-settings">
+          <li class="list-group-item">
+            <h5>聯絡我們</h5>
+            <small>Get notified when someone else is trying to access your account.</small>
+            <a href="/admin/products/new">編輯</a>
+            <div class="toggle-wrapper">
+              <div class="leftpanel-toggle toggle-light success"></div>
+            </div>
+          </li>
+        </ul>
+
+        <h5 class="sidebar-title">站台設定</h5>
+        <ul class="list-group list-group-settings">
+          <li class="list-group-item">
+            <h5>Google analytics</h5>
+            <small>Get notified when someone else is trying to access your account.</small>
+            <a href="/admin/products/new">編輯</a>
+            <div class="toggle-wrapper">
+              <div class="leftpanel-toggle toggle-light success"></div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <h5>Keywords</h5>
+            <small>Make calls to friends and family right from your account.</small>
+            <a href="/admin/products/new">編輯</a>
+            <div class="toggle-wrapper">
+              <div class="leftpanel-toggle-off toggle-light success"></div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- tab-pane -->
+
+
+    </div><!-- tab-content -->
+
+  </div><!-- leftpanelinner -->
+</div><!-- leftpanel -->
