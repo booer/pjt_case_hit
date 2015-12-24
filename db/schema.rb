@@ -16,15 +16,17 @@ ActiveRecord::Schema.define(version: 20151213082654) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "privacy",    default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "products", force: :cascade do |t|
     t.string   "pname"
     t.text     "desc"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "privacy",    default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|

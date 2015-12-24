@@ -1,0 +1,11 @@
+(function(){
+  var $loginForm = $('#myModal');
+  var $form = $('<%= j render 'keyword' %>');
+
+  if ($loginForm.size() > 0) {
+    $loginForm.modal();
+  } else {
+    $('body').append($form);
+    $form.modal();
+  }
+})();

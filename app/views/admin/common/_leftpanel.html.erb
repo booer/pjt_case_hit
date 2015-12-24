@@ -103,7 +103,7 @@
           <li class="list-group-item">
             <h5>聯絡我們</h5>
             <small>Get notified when someone else is trying to access your account.</small>
-            <a href="/admin/products/new">編輯</a>
+            <%= link_to '編輯', admin_contactus_path %>
             <div class="toggle-wrapper">
               <div class="leftpanel-toggle toggle-light success"></div>
             </div>
@@ -115,7 +115,7 @@
           <li class="list-group-item">
             <h5>Google analytics</h5>
             <small>Get notified when someone else is trying to access your account.</small>
-            <a href="/admin/products/new">編輯</a>
+            <%= link_to '編輯', admin_ga_path, remote: true %>
             <div class="toggle-wrapper">
               <div class="leftpanel-toggle toggle-light success"></div>
             </div>
@@ -123,7 +123,7 @@
           <li class="list-group-item">
             <h5>Keywords</h5>
             <small>Make calls to friends and family right from your account.</small>
-            <a href="/admin/products/new">編輯</a>
+            <%= link_to '編輯', admin_keyword_path, remote: true %>
             <div class="toggle-wrapper">
               <div class="leftpanel-toggle-off toggle-light success"></div>
             </div>

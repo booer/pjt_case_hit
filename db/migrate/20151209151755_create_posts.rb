@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.text :content
+      t.boolean :privacy, default: false, null: false
 
       t.timestamps null: false
     end
