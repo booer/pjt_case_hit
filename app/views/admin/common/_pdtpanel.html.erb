@@ -18,26 +18,31 @@
       <!-- ################# MAIN MENU ################### -->
 
       <div class="tab-pane active" id="mainmenu">
-        <h5 class="sidebar-title">動態頁面</h5>
+        <h5 class="sidebar-title">商品力</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
           <li>
-            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>分類管理</span><% end %>
+            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>商品分析</span><% end %>
           </li>
           <li>
-            <%= link_to admin_posts_path do %><i class="fa fa-home"></i> <span>新增文章</span><% end %>
-          </li>
-          <li>
-            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>商品管理</span><% end %>
+            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>訂單管理</span><% end %>
           </li>
         </ul>
-        <h5 class="sidebar-title">靜態頁面</h5>
+        <h5 class="sidebar-title">品牌力</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
-          <li class="nav-parent active"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
-            <ul class="children">
-              <li> <%= link_to '首頁', admin_wellcome_path  %></li>
-              <li> <%= link_to '關於我們', admin_about_path  %></li>
-              <li> <%= link_to '基本設定', admin_settings_path  %></li>
-            </ul>
+          <li>
+            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>社群口碑</span><% end %>
+          </li>
+          <li>
+            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>站台設定</span><% end %>
+          </li>
+          <li>
+            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>行銷模組</span><% end %>
+          </li>
+        </ul>  
+        <h5 class="sidebar-title">用戶輪廓</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk">
+          <li>
+            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>會員分析</span><% end %>
           </li>
         </ul>
       </div><!-- tab-pane -->
@@ -76,7 +81,7 @@
                 <img class="media-object img-circle" width="40px" height="40px" src="/assets/bear.png" alt="">
               </div>
               <div class="media-body">
-                <h4 class="media-heading">窗口-呂小熊</h4>
+                <h4 class="media-heading">-呂小熊</h4>
                 <span><i class="fa fa-phone"></i></span>
               </div>
             </a>
@@ -87,17 +92,31 @@
       <!-- #################### SETTINGS ################### -->
 
       <div class="tab-pane" id="settings">
-        <h5 class="sidebar-title">分析設定</h5>
-        <ul class="list-group list-group-settings">
-          <li class="list-group-item">
-            <h5>Google analytics</h5>
-            <small>Get notified when someone else is trying to access your account.</small>
-            <%= link_to '編輯', admin_ga_path, remote: true %>
-            <div class="toggle-wrapper">
-              <div class="leftpanel-toggle toggle-light success"></div>
-            </div>
+        <h5 class="sidebar-title">商店資訊</h5>
+        <ul class="nav nav-pills nav-stacked nav-quirk">
+          <li>
+            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>基本設定</span><% end %>
+          </li>
+          <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>優化工具</span></a>
+            <ul class="children">
+              <li> <%= link_to 'GA追蹤碼', admin_wellcome_path  %></li>
+              <li> <%= link_to 'FB追蹤碼', admin_about_path  %></li>
+              <li> <%= link_to '線上客服', admin_settings_path  %></li>
+              <li> <%= link_to 'A/B測試', admin_settings_path  %></li>
+            </ul>
           </li>
         </ul>
+        <h5 class="sidebar-title">互動設定</h5>
+          <ul class="nav nav-pills nav-stacked nav-quirk">
+            <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>onborading</span></a>
+              <ul class="children">
+                <li> <%= link_to '進到首頁', admin_wellcome_path  %></li>
+                <li> <%= link_to '商品頁面', admin_about_path  %></li>
+                <li> <%= link_to '購物車中', admin_settings_path  %></li>
+                <li> <%= link_to '結帳流程', admin_settings_path  %></li>
+              </ul>
+            </li>
+          </ul>
       </div><!-- tab-pane -->
 
 

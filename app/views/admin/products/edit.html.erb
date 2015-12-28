@@ -1,16 +1,18 @@
 <%= render 'admin/common/header' %>
 <section>
   <%= render 'admin/common/leftpanel' %>
-
   <div class="mainpanel">
     <div class="contentpanel">
-
       <ol class="breadcrumb breadcrumb-quirk">
         <li><i class="fa fa-home mr5"></i> Home</li>
         <li>商品管理</li>
         <li>修改產品</li>
       </ol>
-      <%= render 'form' %>
+      <div class="panel">
+        <div class="panel-body">
+          <%= render 'form' %>
+        </div>
+      </div>
       <!-- content goes here... -->
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->

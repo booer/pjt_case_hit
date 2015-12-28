@@ -1,6 +1,6 @@
 <%= render 'admin/common/header' %>
 <section>
-  <%= render 'admin/common/leftpanel' %>
+  <%= render 'admin/common/pdtpanel' %>
 
   <div class="mainpanel">
     <div class="contentpanel">
@@ -18,7 +18,9 @@
             <table class="table table-hover nomargin">
               <thead>
                 <tr>
+                  <th style="width:10%;">上架狀態</th>
                   <th>Name</th>
+                  <th style="width:10%;">語系</th>
                   <th class="text-right">date</th>
                   <th></th>
                 </tr>
@@ -26,7 +28,9 @@
               <tbody>
                 <% @products.each do |f| %>
                 <tr>
+                  <td><%= f.status %></td>
                   <td><%= f.pname %></td>
+                  <td><%= f.lang %></td>
                   <td class="text-right"><%= f.updated_at %></td>
                   <td>
                     <ul class="table-options">

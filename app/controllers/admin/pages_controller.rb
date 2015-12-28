@@ -20,7 +20,7 @@ class Admin::PagesController < ApplicationController
 	def contact
 		
 	end
-	def contactus
+	def settings
 		
 	end
 end

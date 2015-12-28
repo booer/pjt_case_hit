@@ -14,10 +14,11 @@ Rails.application.routes.draw do
     get 'about', to: 'pages#about'
     get 'wellcome', to: 'pages#wellcome'
     get 'contact', to: 'pages#contact'
-    get 'contactus', to: 'pages#contactus'
+    get 'settings', to: 'pages#settings'
     get 'ga', to: 'pages#ga'
     get 'keyword', to: 'pages#keyword'
     get 'login', to: 'pages#login'
+    resources :category 
     resources :posts
     resources :products
   end

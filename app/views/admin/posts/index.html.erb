@@ -1,16 +1,13 @@
 <%= render 'admin/common/header' %>
 <section>
   <%= render 'admin/common/leftpanel' %>
-
   <div class="mainpanel">
     <div class="contentpanel">
-
       <ol class="breadcrumb breadcrumb-quirk">
         <li><i class="fa fa-home mr5"></i> Home</li>
         <li>文章列表</li>
         <li><%= link_to '新增文章', new_admin_post_path %></li>
       </ol>
-
       <!-- content goes here... -->
       <div class="panel">            
         <div class="panel-body">
@@ -18,14 +15,16 @@
             <table class="table table-hover nomargin">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th class="text-right">date</th>
+                  <th style="width:10%;">顯示狀態</th>
+                  <th>文章標題</th>
+                  <th class="text-right">最後更新日期</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <% @posts.each do |f| %>
                 <tr>
+                  <td><%= f.status %></td>
                   <td><%= f.title %></td>
                   <td class="text-right"><%= f.updated_at %></td>
                   <td>
