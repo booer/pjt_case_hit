@@ -1,12 +1,13 @@
 class Admin::CategoryController < ApplicationController
 	def index
-		@post_category = PostCategory.all
+		@post_categorys = PostCategory.all
+		@post_category = PostCategory.new
 	end
 	def new
-		
+		@post_category = PostCategory.new
 	end
 	def create
-		
+
 	end
 	def edit
 		

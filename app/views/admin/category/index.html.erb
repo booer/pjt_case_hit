@@ -9,8 +9,35 @@
         <li><i class="fa fa-home mr5"></i> Home</li>
         <li>分類管理</li>
       </ol>
-      我希望在這一頁就能直接增加目錄＆即時顯示增加的項目
+      <div class="panel">            
+        <div class="panel-body">
+          <%= render 'new' %>
+        </div>
+      </div>
       <!-- content goes here... -->
+      <div class="panel">            
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-hover nomargin">
+              <thead>
+                <tr>
+                  <th style="width:10%;">排序</th>
+                  <th class="text-right">中文顯示</th>
+                  <th class="text-right">英文顯示</th>
+                  <th class="text-right">動作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- table-responsive -->
+        </div>
+      </div>
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->
 </section>
