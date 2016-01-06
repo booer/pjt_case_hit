@@ -8,6 +8,211 @@
   
 </head>
 <body>
-	<%= yield %>
+
+<!--     <div id="loader">
+        <div class="loader-container">
+			<div class="sexyload">Loading...</div>
+        </div>
+    </div> -->
+	<header id="headeraffix" class="header" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+				<div class="container">
+					<div class="row mb-5">
+						<div class="col-md-12">
+							<nav class="yamm navbar navbar-default" role="navigation">
+								<div class="container-fluid">
+									<div class="navbar-table">
+										<div class="navbar-cell tight">
+											<div class="navbar-header">
+												<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Ova"></a>
+												<div>
+													<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+														<span class="sr-only">Toggle navigation</span>
+														<span class="fa fa-bars"></span>
+													</button>
+												</div>
+											</div><!-- end navbar-header -->
+										</div><!-- end navbar-cell -->
+
+										<div class="navbar-cell stretch">
+											<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+												<div class="navbar-cell">
+													<ul class="nav navbar-nav navbar-right">
+														<li class="dropdown yamm-fw">
+															<%=link_to '關於', about_path %>
+														</li>
+														<li class="dropdown yamm-fw">
+															<%=link_to '聯絡我們', contact_path %>
+														</li>
+														<li class="dropdown yamm-fw">
+															<%=link_to '文章', posts_path %>
+														</li>
+														<li class="dropdown yamm-fw">
+															<%=link_to '產品介紹', product_path %>
+														</li>
+														<li class="dropdown yamm-fw">
+															<%=link_to '首頁', index_path %>
+														</li>												
+													</ul>
+												</div><!-- end navbar-cell -->
+											</div><!-- /.navbar-collapse -->        
+										</div><!-- end navbar cell -->
+									</div><!-- end navbar-table -->
+								</div><!-- end container fluid -->
+							</nav><!-- end navbar -->
+						</div><!-- end col -->
+					</div><!-- end row -->
+				</div><!-- end container -->
+	</header>
+	<div id="wrapper">
+		<section class="pageheader lighthead box-shadow grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h1>Blog Style</h1>
+						<p>All our awesome blog items with fullwidth style</p>
+					</div>
+					<div class="col-md-3">
+	                    <ol class="breadcrumb text-right">
+	                        <li><a href="#">Home</a></li>
+	                        <li class="active">Blog</li>
+	                    </ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<%= yield %>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="widget">
+							<div class="widget-title">
+								<h4>About Ova</h4>
+								<hr>
+							</div><!-- end title -->
+
+							<div class="text-widget">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+								<ul class="social">
+									<li class="facebook" ><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								</ul>
+
+							</div><!-- end text-widget -->
+						</div><!-- end widget -->
+					</div><!-- end col -->
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="widget">
+							<div class="widget-title">
+								<h4>Latest Tweets</h4>
+								<hr>
+							</div><!-- end title -->
+							<div class="twitter-widget">
+								<ul class="latest-tweets">
+									<li>
+										<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
+										<span>2 hours ago</span>
+									</li>
+									<li>
+										<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
+										<span>2 hours ago</span>
+									</li>
+								</ul><!-- end latest-tweet -->
+							</div><!-- end twitter-widget -->
+						</div><!-- end widget -->
+					</div><!-- end col -->
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="widget">
+							<div class="widget-title">
+								<h4>Get In Touch</h4>
+								<hr>
+							</div><!-- end title -->
+							<div class="contact-widget">
+								<ul class="contact-details">
+									<li><i class="fa fa-map-marker"></i> Address : <strong>7oroof.com NetWork , 2 AlBahr St, Tanta , AlGharbia, Egypt.</strong></li>
+									<li><i class="fa fa-phone"></i> Phone : <strong>Sales Telephone No : 02 01065370701</strong></li>
+									<li><i class="fa fa-envelope"></i> Email : <strong>Sales Email Account : sales@yoursite.com</strong></li>
+								</ul><!-- end contact-details -->
+							</div><!-- end contact widget -->
+						</div><!-- end widget -->
+					</div><!-- end col -->
+
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="widget">
+							<div class="widget-title">
+								<h4>Latest Posts</h4>
+								<hr>
+							</div><!-- end title -->
+							<div class="widget-blog">
+								<div class="blog-list">
+									<div class="row">
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<div class="blog-image">
+												<img src="upload/footer_01.jpg" alt="">
+											</div><!-- end blog-image -->
+										</div><!-- end col -->
+
+										<div class="col-md-8 col-sm-8 col-xs-12 nopadding">
+											<div class="blog-title">
+												<p><a href="blog-single-rs.html">Integer lorem qus, adipiscing contum tristique, turpis. </a></p>
+												<div class="blog-meta">
+													<span><a href="#"><i class="fa fa-heart"></i> 13</a></span>
+													<span><a href="#"><i class="fa fa-comment"></i> 22</a></span>
+												</div><!-- end blog-meta -->
+											</div><!-- end blog-title -->
+										</div><!-- end col -->
+									</div><!-- end row -->
+								</div><!-- end bloglist -->
+
+								<div class="blog-list">
+									<div class="row">
+										<div class="col-md-4 col-sm-4 col-xs-12">
+											<div class="blog-image">
+												<img src="upload/footer_02.png" alt="">
+											</div><!-- end blog-image -->
+										</div><!-- end col -->
+
+										<div class="col-md-8 col-sm-8 col-xs-12 nopadding">
+											<div class="blog-title">
+												<p><a href="blog-single-rs.html">Integer lorem qus, adipiscing contum tristique, turpis. </a></p>
+												<div class="blog-meta">
+													<span><a href="#"><i class="fa fa-heart"></i> 13</a></span>
+													<span><a href="#"><i class="fa fa-comment"></i> 22</a></span>
+												</div><!-- end blog-meta -->
+											</div><!-- end blog-title -->
+										</div><!-- end col -->
+									</div><!-- end row -->
+								</div><!-- end bloglist -->
+							</div><!-- end blog -->
+						</div><!-- end widget -->
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</footer><!-- end footer -->
+
+		<section class="copyrights">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>All Rights Reserved © Ova Template | Template By <a href="#">TemplateVisual</a></p>
+					</div>
+					<div class="col-md-6 text-right">
+						<p>Terms of Use - Privacy Policy - Money Back Guarantee</p>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end copyrights -->
+
+	    <div class="backtotop">Scroll to Top</div>
+
+	</div><!-- end wrapper -->
+ 		
+
 </body>
 </html>
