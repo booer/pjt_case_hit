@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20160106104748) do
 
   create_table "pages", force: :cascade do |t|
-    t.text     "about_cn"
-    t.text     "about_en"
+    t.text     "page_cn"
+    t.text     "page_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

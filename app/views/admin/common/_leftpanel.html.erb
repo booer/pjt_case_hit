@@ -7,7 +7,6 @@
       <li class="tooltips active" data-toggle="tooltip" title="Main Menu"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
       <li class="tooltips unread" data-toggle="tooltip" title="Check Mail"><a data-toggle="tab" data-target="#emailmenu"><i class="tooltips fa fa-envelope"></i></a></li>
       <li class="tooltips" data-toggle="tooltip" title="Contacts"><a data-toggle="tab" data-target="#contactmenu"><i class="fa fa-user"></i></a></li>
-      <li class="tooltips" data-toggle="tooltip" title="Settings"><a data-toggle="tab" data-target="#settings"><i class="fa fa-cog"></i></a></li>
       <li class="tooltips" data-toggle="tooltip" title="Log Out">
         <%= link_to admin_login_path do %><i class="fa fa-sign-out"></i><% end %>
       </li>
@@ -23,6 +22,7 @@
           <li class="nav-parent active"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
             <ul class="children">
               <li> <%= link_to '關於我們', edit_admin_page_path('1')  %></li>
+              <li> <%= link_to '公司沿革', edit_admin_page_path('2')  %></li>
               <li> <%= link_to '站台設定', edit_admin_site_path('1')  %></li>
             </ul>
           </li>
@@ -30,7 +30,6 @@
         <h5 class="sidebar-title">動態頁面</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
           <li>
-            <a href="admin/category.html">分類</a>
             <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>分類管理</span><% end %>
           </li>
           <li>
@@ -83,21 +82,7 @@
         </ul>
       </div><!-- tab-pane -->
 
-      <!-- #################### SETTINGS ################### -->
 
-      <div class="tab-pane" id="settings">
-        <h5 class="sidebar-title">分析設定</h5>
-        <ul class="list-group list-group-settings">
-          <li class="list-group-item">
-            <h5>Google analytics</h5>
-            <small>Get notified when someone else is trying to access your account.</small>
-            <%= link_to '編輯', admin_ga_path, remote: true %>
-            <div class="toggle-wrapper">
-              <div class="leftpanel-toggle toggle-light success"></div>
-            </div>
-          </li>
-        </ul>
-      </div><!-- tab-pane -->
 
 
     </div><!-- tab-content -->

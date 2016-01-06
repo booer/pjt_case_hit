@@ -16,6 +16,6 @@ class Admin::PagesController < ApplicationController
 
 	private
 	def page_params
-		params.require(:page).permit(:about_cn, :about_en)
+		params.require(:page).permit(:page_cn, :page_en)
 	end
 end

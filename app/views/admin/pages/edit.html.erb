@@ -11,8 +11,8 @@
       </ol>
 
       <%= bootstrap_form_for [:admin, @page] do |e| %>
-        <%= e.text_area :about_cn %>
-        <%= e.text_area :about_en %>
+        <%= e.text_field :page_cn, class: 'redactor form-control', :placeholder => "Place content Here!", id: "redactor"%>
+        <%= e.text_field :page_en, class: 'redactor form-control', :placeholder => "Place content Here!", id: "redactor"%>
         <%= e.submit '送出' %>
       <% end %>
       <!-- content goes here... -->

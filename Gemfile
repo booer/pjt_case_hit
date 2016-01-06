@@ -10,6 +10,11 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+#editor
+gem 'redactor-rails'
+gem "carrierwave"
+gem "mini_magick"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.rc2'
 # Use sqlite3 as the database for Active Record

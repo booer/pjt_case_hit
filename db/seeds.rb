@@ -7,4 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Site.create(ga: '', fax: '', tel: '', address: '')
-Page.create(about_en:'', about_cn:'')
+Page.create(page_cn:'', page_en:'')
+Page.create(page_cn:'', page_en:'')

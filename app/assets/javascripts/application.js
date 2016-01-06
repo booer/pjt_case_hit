@@ -19,3 +19,4 @@
 //= require "bootstrap/modal"
 //= require "bootstrap/dropdown"
 //= require "quirk"
+//= require "redactor-rails"
