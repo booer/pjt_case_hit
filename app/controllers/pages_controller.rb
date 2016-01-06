@@ -8,4 +8,11 @@ class PagesController < ApplicationController
 	def contact
 		
 	end
+	def index
+
+	end
+	def product
+
+	end
+	
 end
