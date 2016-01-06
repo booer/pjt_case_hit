@@ -14,6 +14,32 @@
 			<div class="sexyload">Loading...</div>
         </div>
     </div> -->
+    <div class="topbar clearfix">
+			<div class="container">
+				<div class="row-fluid mb-5">
+					<div class="col-md-12">
+						<div class="pull-left">
+							<div class="contactwrap text-left">
+								<ul class="list-inline">
+									<li><i class="fa fa-phone"></i> Call Us : 002 0106 5370701</li>
+									<li><i class="fa fa-envelope"></i> Email Us : 002 0106 5370701</li>
+								</ul>
+							</div><!-- end contactwrap -->
+						</div><!-- end col -->
+
+						<div class="pull-right">
+							<ul class="social">
+								<li class="facebook" ><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li class="traditional chinese"><a href="#">中文</a></li>
+								<li class="English"><a href="#">EN</a></li>
+							</ul>
+						</div><!-- end col -->
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+	</div><!-- end topbar -->
+
 	<header id="headeraffix" class="header" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
 				<div class="container">
 					<div class="row mb-5">
@@ -38,19 +64,20 @@
 												<div class="navbar-cell">
 													<ul class="nav navbar-nav navbar-right">
 														<li class="dropdown yamm-fw">
-															<%=link_to '關於', about_path %>
-														</li>
+															<%=link_to '首頁', index_path %>
+														</li>											
 														<li class="dropdown yamm-fw">
-															<%=link_to '聯絡我們', contact_path %>
-														</li>
-														<li class="dropdown yamm-fw">
-															<%=link_to '文章', posts_path %>
+															<%=link_to '關於我們', about_path %>
 														</li>
 														<li class="dropdown yamm-fw">
 															<%=link_to '產品介紹', product_path %>
 														</li>
 														<li class="dropdown yamm-fw">
-															<%=link_to '首頁', index_path %>
+															<%=link_to '最新消息', posts_path %>
+														</li>		
+
+														<li class="dropdown yamm-fw">					
+															<%=link_to '聯絡我們', contact_path %>
 														</li>												
 													</ul>
 												</div><!-- end navbar-cell -->
@@ -64,138 +91,7 @@
 				</div><!-- end container -->
 	</header>
 	<div id="wrapper">
-		<section class="pageheader lighthead box-shadow grey">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9">
-						<h1>Blog Style</h1>
-						<p>All our awesome blog items with fullwidth style</p>
-					</div>
-					<div class="col-md-3">
-	                    <ol class="breadcrumb text-right">
-	                        <li><a href="#">Home</a></li>
-	                        <li class="active">Blog</li>
-	                    </ol>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<%= yield %>
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>About Ova</h4>
-								<hr>
-							</div><!-- end title -->
-
-							<div class="text-widget">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam, adipiscing condimentum tristique vel, eleifend sed turpis. Pellentesque cursus arcu id magna euismod in elementum purus molestie.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-								<ul class="social">
-									<li class="facebook" ><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li class="google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								</ul>
-
-							</div><!-- end text-widget -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>Latest Tweets</h4>
-								<hr>
-							</div><!-- end title -->
-							<div class="twitter-widget">
-								<ul class="latest-tweets">
-									<li>
-										<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
-										<span>2 hours ago</span>
-									</li>
-									<li>
-										<h4><a href="#" title="">@Begha</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</h4>
-										<span>2 hours ago</span>
-									</li>
-								</ul><!-- end latest-tweet -->
-							</div><!-- end twitter-widget -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>Get In Touch</h4>
-								<hr>
-							</div><!-- end title -->
-							<div class="contact-widget">
-								<ul class="contact-details">
-									<li><i class="fa fa-map-marker"></i> Address : <strong>7oroof.com NetWork , 2 AlBahr St, Tanta , AlGharbia, Egypt.</strong></li>
-									<li><i class="fa fa-phone"></i> Phone : <strong>Sales Telephone No : 02 01065370701</strong></li>
-									<li><i class="fa fa-envelope"></i> Email : <strong>Sales Email Account : sales@yoursite.com</strong></li>
-								</ul><!-- end contact-details -->
-							</div><!-- end contact widget -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="widget">
-							<div class="widget-title">
-								<h4>Latest Posts</h4>
-								<hr>
-							</div><!-- end title -->
-							<div class="widget-blog">
-								<div class="blog-list">
-									<div class="row">
-										<div class="col-md-4 col-sm-4 col-xs-12">
-											<div class="blog-image">
-												<img src="upload/footer_01.jpg" alt="">
-											</div><!-- end blog-image -->
-										</div><!-- end col -->
-
-										<div class="col-md-8 col-sm-8 col-xs-12 nopadding">
-											<div class="blog-title">
-												<p><a href="blog-single-rs.html">Integer lorem qus, adipiscing contum tristique, turpis. </a></p>
-												<div class="blog-meta">
-													<span><a href="#"><i class="fa fa-heart"></i> 13</a></span>
-													<span><a href="#"><i class="fa fa-comment"></i> 22</a></span>
-												</div><!-- end blog-meta -->
-											</div><!-- end blog-title -->
-										</div><!-- end col -->
-									</div><!-- end row -->
-								</div><!-- end bloglist -->
-
-								<div class="blog-list">
-									<div class="row">
-										<div class="col-md-4 col-sm-4 col-xs-12">
-											<div class="blog-image">
-												<img src="upload/footer_02.png" alt="">
-											</div><!-- end blog-image -->
-										</div><!-- end col -->
-
-										<div class="col-md-8 col-sm-8 col-xs-12 nopadding">
-											<div class="blog-title">
-												<p><a href="blog-single-rs.html">Integer lorem qus, adipiscing contum tristique, turpis. </a></p>
-												<div class="blog-meta">
-													<span><a href="#"><i class="fa fa-heart"></i> 13</a></span>
-													<span><a href="#"><i class="fa fa-comment"></i> 22</a></span>
-												</div><!-- end blog-meta -->
-											</div><!-- end blog-title -->
-										</div><!-- end col -->
-									</div><!-- end row -->
-								</div><!-- end bloglist -->
-							</div><!-- end blog -->
-						</div><!-- end widget -->
-					</div><!-- end col -->
-				</div><!-- end row -->
-			</div><!-- end container -->
-		</footer><!-- end footer -->
-
 		<section class="copyrights">
 			<div class="container">
 				<div class="row">
