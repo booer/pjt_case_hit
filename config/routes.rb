@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  root 'pages#wellcome'
+  root 'pages#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get '/auth/:provider/callback', to: 'sessions#create'
   
   get 'about', to: 'pages#about'
   get 'wellcome', to: 'pages#wellcome'
   get 'contact', to: 'pages#contact'
+  get 'index' , to: 'pages#index'
+  get 'product' , to: 'pages#product'
   resources :posts
   resources :products
 
