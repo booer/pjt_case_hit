@@ -5,7 +5,6 @@ class CreateProducts < ActiveRecord::Migration
       t.text :desc
       t.boolean :status, default: '0', null: false
       t.boolean :lang, default: '0', null: false
-      t.boolean :privacy, default: false, null: false
 
       t.timestamps null: false
     end

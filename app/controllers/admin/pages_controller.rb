@@ -2,25 +2,20 @@ class Admin::PagesController < ApplicationController
 	respond_to :js
 	layout 'admin'
 	# before_action :is_admin?, only: [:about, :wellcome]
-	def about
-		
+	def edit
+		@page = Page.find(params[:id])
 	end
-	def login
-		
+	def update
+		@page = Page.find(params[:id])
+		if @page.update(page_params)
+			redirect_to edit_admin_page_path('1') 
+		else
+			render :edit
+		end
 	end
-	def wellcome
-		
-	end
-	def ga
-		
-	end
-	def keyword
-		
-	end
-	def contact
-		
-	end
-	def settings
-		
+
+	private
+	def page_params
+		params.require(:page).permit(:about_cn, :about_en)
 	end
 end

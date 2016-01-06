@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228032114) do
+ActiveRecord::Schema.define(version: 20160106104748) do
+
+  create_table "pages", force: :cascade do |t|
+    t.text     "about_cn"
+    t.text     "about_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "post_categories", force: :cascade do |t|
     t.string   "cname"
@@ -26,7 +33,6 @@ ActiveRecord::Schema.define(version: 20151228032114) do
     t.text     "content"
     t.boolean  "status",     default: false, null: false
     t.boolean  "lang",       default: false, null: false
-    t.boolean  "privacy",    default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
@@ -36,9 +42,24 @@ ActiveRecord::Schema.define(version: 20151228032114) do
     t.text     "desc"
     t.boolean  "status",     default: false, null: false
     t.boolean  "lang",       default: false, null: false
-    t.boolean  "privacy",    default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.string   "tel"
+    t.string   "address"
+    t.string   "fax"
+    t.text     "ga"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "srvs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

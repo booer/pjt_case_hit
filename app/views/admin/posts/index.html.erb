@@ -6,8 +6,12 @@
       <ol class="breadcrumb breadcrumb-quirk">
         <li><i class="fa fa-home mr5"></i> Home</li>
         <li>文章列表</li>
-        <li><%= link_to '新增文章', new_admin_post_path %></li>
       </ol>
+      <div class="panel">            
+        <div class="panel-body">
+          <%= link_to '新增文章', new_admin_post_path %>
+        </div>
+      </div>  
       <!-- content goes here... -->
       <div class="panel">            
         <div class="panel-body">
@@ -15,7 +19,7 @@
             <table class="table table-hover nomargin">
               <thead>
                 <tr>
-                  <th style="width:10%;">顯示狀態</th>
+                  <th style="width:10%;">語系</th>
                   <th>文章標題</th>
                   <th class="text-right">最後更新日期</th>
                   <th></th>
@@ -24,7 +28,7 @@
               <tbody>
                 <% @posts.each do |f| %>
                 <tr>
-                  <td><%= f.status %></td>
+                  <td><%= f.lang %></td>
                   <td><%= f.title %></td>
                   <td class="text-right"><%= f.updated_at %></td>
                   <td>

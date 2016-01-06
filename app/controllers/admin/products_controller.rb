@@ -35,6 +35,6 @@ class Admin::ProductsController < Admin::BaseController
 	
 	private
 	def product_params
-		params.require(:product).permit(:pname, :desc)
+		params.require(:product).permit(:pname, :desc, :lang, :status)
 	end
 end	

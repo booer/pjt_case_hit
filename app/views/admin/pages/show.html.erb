@@ -11,6 +11,10 @@
         <li class="active">關於我們</li>
       </ol>
 
+      <%= bootstrap_form_for [:admin, @page] do |e| %>
+        <%= e.text_area :about_cn %>
+        <%= e.text_area :about_en %>
+      <% end %>
       <!-- content goes here... -->
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->
