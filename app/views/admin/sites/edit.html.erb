@@ -5,11 +5,6 @@
   <div class="mainpanel">
     <div class="contentpanel">
 
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><i class="fa fa-home mr5"></i> Home</li>
-        <li class="active">站台設定</li>
-      </ol>
-
       <%= bootstrap_form_for [:admin, @site] do |e| %>
         <%= e.text_field :fax %>
         <%= e.text_field :tel %>

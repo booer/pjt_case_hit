@@ -5,7 +5,12 @@
     <div class="contentpanel">
       <div class="panel">
         <div class="panel-body">
-          <%= render 'form' %>
+          <%= bootstrap_form_for [:admin, @aimg] do |e| %>
+						<div class="form-group">
+							 <%= e.file_field :image %>
+						</div>
+						<%= e.submit '送出' %>
+					<% end %>
           <!-- content goes here... -->
         </div><!-- contentpanel -->
       </div>

@@ -1735,7 +1735,7 @@
 		margin:0;
 		padding:0;
 	}
-	.breadcrumb {
+/*	.breadcrumb {
 	    background-color: transparent;
 	    border-radius: 0;
 	    list-style: outside none none;
@@ -1754,7 +1754,7 @@
 	.breadcrumb > li {
 	    font-size: 13px;
 	    color:#afb0b4;
-	}
+	}*/
 	.pageheader {
 		position: relative;
 		display: block;

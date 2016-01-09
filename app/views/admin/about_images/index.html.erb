@@ -4,16 +4,6 @@
 
   <div class="mainpanel">
     <div class="contentpanel">
-
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><i class="fa fa-home mr5"></i> Home</li>
-        <li>分類管理</li>
-      </ol>
-      <div class="panel">            
-        <div class="panel-body">
-          <%= render 'new' %>
-        </div>
-      </div>
       <!-- content goes here... -->
       <div class="panel">            
         <div class="panel-body">
@@ -21,23 +11,29 @@
             <table class="table table-hover nomargin">
               <thead>
                 <tr>
-                  <th style="width:10%;">排序</th>
-                  <th class="text-right">中文顯示</th>
-                  <th class="text-right">英文顯示</th>
-                  <th class="text-right">動作</th>
+                  <th>縮圖</th>
+                  <th class="text-right">最後更新日期</th>
                 </tr>
               </thead>
               <tbody>
+                <% @aimgs.each do |f| %>
                 <tr>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
+                  <% if f.image.blank? %>
+                    <td><%= link_to '上傳', edit_admin_about_image_path(f) %></td>
+                  <% else %>
+                    <td><%= image_tag f.image_url(:image_s).to_s %></td>
+                  <% end %>
+                  <td class="text-right"><%= f.updated_at %></td>
                 </tr>
+                <% end %>
               </tbody>
             </table>
           </div><!-- table-responsive -->
         </div>
-      </div>
+      </div>      
+      <!-- content goes here... -->
+      <!-- content goes here... -->
     </div><!-- contentpanel -->
   </div><!-- mainpanel -->
 </section>
+

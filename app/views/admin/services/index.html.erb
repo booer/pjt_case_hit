@@ -3,13 +3,7 @@
   <%= render 'admin/common/leftpanel' %>
 
   <div class="mainpanel">
-    <div class="contentpanel">
-
-      <div class="panel">            
-        <div class="panel-body">
-          <%= link_to '新增產品', new_admin_product_path %>
-        </div>
-      </div>        
+    <div class="contentpanel">      
       <!-- content goes here... -->
       <div class="panel">            
         <div class="panel-body">
@@ -17,27 +11,22 @@
             <table class="table table-hover nomargin">
               <thead>
                 <tr>
-                  <th style="width:10%;">上架狀態</th>
-                  <th>商品名稱</th>
-                  <th style="width:10%;">語系</th>
-                  <th class="text-right">date</th>
+                  <th style="width:40%;">標題</th>
+                  <th style="width:40%;">描述</th>
+                  <th>語系</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                <% @products.each do |f| %>
+                <% @srvs.each do |f| %>
                 <tr>
-                  <td><%= f.status %></td>
-                  <td><%= f.pname %></td>
+                  <td><%= f.title %></td>
+                  <td><%= f.desc %></td>
                   <td><%= f.lang %></td>
-                  <td class="text-right"><%= f.updated_at %></td>
                   <td>
                     <ul class="table-options">
                       <li>
-                      <%= link_to edit_admin_product_path(f.id) do %><i class="fa fa-pencil"></i><% end %>
-                      </li>
-                      <li>
-                      <%= link_to admin_product_path(f.id), method: :'DELETE' do %><i class="fa fa-trash"></i><% end %>
+                      <%= link_to edit_admin_service_path(f.id) do %><i class="fa fa-pencil"></i><% end %>
                       </li>
                     </ul>
                   </td>

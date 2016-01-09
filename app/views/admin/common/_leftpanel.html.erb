@@ -19,6 +19,9 @@
       <div class="tab-pane active" id="mainmenu">
         <h5 class="sidebar-title">靜態頁面</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
+          <li>
+            <%= link_to admin_about_images_path do %><i class="fa fa-cube"></i> <span>首頁橫幅</span><% end %>
+          </li>
           <li class="nav-parent active"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
             <ul class="children">
               <li> <%= link_to '關於我們', edit_admin_page_path('1')  %></li>
@@ -30,19 +33,14 @@
         <h5 class="sidebar-title">動態頁面</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
           <li>
-            <%= link_to admin_category_index_path do %><i class="fa fa-map-marker"></i> <span>分類管理</span><% end %>
-          </li>
-          <li>
             <%= link_to admin_posts_path do %><i class="fa fa-home"></i> <span>新增文章</span><% end %>
           </li>
           <li>
             <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>商品管理</span><% end %>
           </li>
+
           <li>
-            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>首頁橫幅</span><% end %>
-          </li>
-          <li>
-            <%= link_to admin_products_path do %><i class="fa fa-cube"></i> <span>服務項目</span><% end %>
+            <%= link_to admin_services_path do %><i class="fa fa-cube"></i> <span>服務項目</span><% end %>
           </li>
         </ul>
       </div><!-- tab-pane -->

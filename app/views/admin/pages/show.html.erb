@@ -4,13 +4,11 @@
 
   <div class="mainpanel">
     <div class="contentpanel">
-
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><i class="fa fa-home mr5"></i> Home</li>
-        <li>頁面</li>
-        <li class="active">關於我們</li>
-      </ol>
-
+      <div class="panel">            
+        <div class="panel-body">
+          <%= link_to '輪播圖庫', new_admin_post_path %>
+        </div>
+      </div>  
       <%= bootstrap_form_for [:admin, @page] do |e| %>
         <%= e.text_area :about_cn %>
         <%= e.text_area :about_en %>

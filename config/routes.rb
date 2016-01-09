@@ -16,11 +16,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'posts#index'
     get 'contact', to: 'pages#contact'
-    get 'ga', to: 'pages#ga'
     get 'login', to: 'pages#login'
 
-    resources :category 
+    resources :about_images
     resources :posts
+    resources :services
     resources :pages
     resources :sites
     resources :products

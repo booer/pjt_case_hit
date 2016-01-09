@@ -11,19 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160106104748) do
+ActiveRecord::Schema.define(version: 20160109081808) do
 
-  create_table "pages", force: :cascade do |t|
-    t.text     "page_cn"
-    t.text     "page_en"
+  create_table "about_images", force: :cascade do |t|
+    t.integer  "page"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "post_categories", force: :cascade do |t|
-    t.string   "cname"
-    t.string   "ename"
-    t.integer  "post_id"
+  create_table "home_images", force: :cascade do |t|
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.text     "page_cn"
+    t.text     "page_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160106104748) do
     t.boolean  "lang",       default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "image"
   end
 
   create_table "products", force: :cascade do |t|
@@ -46,18 +52,19 @@ ActiveRecord::Schema.define(version: 20160106104748) do
     t.datetime "updated_at",                 null: false
   end
 
+  create_table "services", force: :cascade do |t|
+    t.string   "title"
+    t.text     "desc"
+    t.boolean  "lang",       default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
   create_table "sites", force: :cascade do |t|
     t.string   "tel"
     t.string   "address"
     t.string   "fax"
     t.text     "ga"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "srvs", force: :cascade do |t|
-    t.string   "title"
-    t.text     "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
