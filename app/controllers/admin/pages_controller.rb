@@ -8,7 +8,7 @@ class Admin::PagesController < ApplicationController
 	def update
 		@page = Page.find(params[:id])
 		if @page.update(page_params)
-			redirect_to edit_admin_page_path('1') 
+			redirect_to edit_admin_page_path(params[:id]) 
 		else
 			render :edit
 		end
