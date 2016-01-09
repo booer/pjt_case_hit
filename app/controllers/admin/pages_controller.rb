@@ -1,5 +1,4 @@
 class Admin::PagesController < ApplicationController
-	respond_to :js
 	layout 'admin'
 	# before_action :is_admin?, only: [:about, :wellcome]
 	def edit

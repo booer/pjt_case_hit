@@ -26,7 +26,11 @@
                 <% @posts.each do |f| %>
                 <tr>
                   <td><%= f.lang %></td>
-                  <td><%= image_tag f.image_url(:image_s).to_s %></td>
+                  <% if f.image.blank? %>
+                    <td><%= image_tag f.image_url(:image_s).to_s %></td>
+                  <% else %>
+                    <td></td>
+                  <% end %>
                   <td><%= f.title %></td>
                   <td class="text-right"><%= f.updated_at %></td>
                   <td>
