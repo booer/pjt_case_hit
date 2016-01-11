@@ -11,11 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109081808) do
+ActiveRecord::Schema.define(version: 20160110072911) do
 
   create_table "about_images", force: :cascade do |t|
     t.integer  "page"
     t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "finalimgs", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "imga"
+    t.string   "imgb"
+    t.string   "imgc"
+    t.string   "imgd"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,7 +56,13 @@ ActiveRecord::Schema.define(version: 20160109081808) do
   create_table "products", force: :cascade do |t|
     t.string   "pname"
     t.text     "desc"
-    t.boolean  "status",     default: false, null: false
+    t.text     "detail"
+    t.text     "feature"
+    t.string   "pname_en"
+    t.text     "desc_en"
+    t.text     "detail_en"
+    t.text     "feature_en"
+    t.string   "image"
     t.boolean  "lang",       default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false

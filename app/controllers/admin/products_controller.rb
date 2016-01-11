@@ -4,6 +4,7 @@ class Admin::ProductsController < Admin::BaseController
 	end
 	def new
 		@product = Product.new
+		@product.finalimgs.build
 	end
 	def create
 		@product = Product.new(product_params)
@@ -35,6 +36,6 @@ class Admin::ProductsController < Admin::BaseController
 	
 	private
 	def product_params
-		params.require(:product).permit(:pname, :desc, :lang, :status)
+		params.require(:product).permit(:pname, :desc, :feature, :detail, :image, finalimgs_attributes: [:id, :imga, :imgb, :imgc, :imgd])
 	end
 end	

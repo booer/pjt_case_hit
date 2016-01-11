@@ -19,5 +19,19 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :image_s do
     process :resize_to_fit => [50, 50]
   end
-
+  version :post_s do
+    process :resize_to_fit => [360, 360]
+  end
+  version :post_banner do
+    process :resize_to_fit => [750, 285]
+  end
+  version :product_list_s do
+    process :resize_to_fit => [350, 350]
+  end
+  version :info_banner do
+    process :resize_to_fit => [750, 575]
+  end  
+  version :info_r do
+    process :resize_to_fit => [263, 263]
+  end
 end

@@ -1,19 +1,44 @@
 <%= bootstrap_form_for [:admin, @product] do |e| %>
-	<div class="form-group">
-		<label>上架狀態 </label><br>
-		<%= e.radio_button :status, 0, label: "顯示", inline: true %>
-	  <%= e.radio_button :status, 1, label: "不顯示", inline: true %>
-  </div>
-	<div class="form-group">
-		<label>語系 </label><br>
-		<%= e.radio_button :status, 1, label: "中文", inline: true %>
-	  <%= e.radio_button :status, 0, label: "英文", inline: true %>
-  </div>
-  <div class="form-group">
-		<%= e.text_field :pname, label: '商品名稱' %>
+	<div class="panel-body col-md-6">
+	  <div class="form-group">
+			<%= e.text_field :pname, label: '商品名稱' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :feature, label: '商品特色' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :desc, label: '商品描述' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :detail, label: '商品說明' %>
+		</div>
 	</div>
-	<div class="form-group">
-		<%= e.text_area :desc, label: '商品描述' %>
+	<div class="panel-body col-md-6">
+	  <div class="form-group">
+			<%= e.text_field :pname_en, label: '商品名稱(英)' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :feature_en, label: '商品特色(英)' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :desc_en, label: '商品描述(英)' %>
+		</div>
+		<div class="form-group">
+			<%= e.text_area :detail_en, label: '商品說明(英)' %>
+		</div>
 	</div>
-	<%= e.submit '送出' %>
+	<div class="panel-body">
+		<div class="form-group">
+		 	<div class="form-group">
+				 <%= e.file_field :image, label: '商品圖片' %>
+			</div>
+			<%= e.fields_for :finalimgs do |f| %>
+			    <%= f.file_field :imga, label: '完成圖1' %>
+			    <%= f.file_field :imgb, label: '完成圖1' %>
+			    <%= f.file_field :imgc, label: '完成圖1' %>
+			    <%= f.file_field :imgd, label: '完成圖1' %>
+			<% end %>
+		</div>
+		<%= e.submit '送出' %>
+	</div
 <% end %>
