@@ -11,8 +11,9 @@ class PagesController < ApplicationController
 	def index
 
 	end
-	def product
+	
+	def history
 
 	end
-	
+
 end
