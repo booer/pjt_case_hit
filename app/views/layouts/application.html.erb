@@ -68,9 +68,24 @@
 														</li>											
 														<li class="dropdown yamm-fw">
 															<%=link_to '關於我們', about_path %>
-														</li>
+														<ul class="dropdown-menu">
+															<li>
+																<div class="yamm-content">
+																	<div class="row">
+																		<div class="col-md-3 col-xs-12 nopadding">
+																			<div class="box">
+																				<ul>
+																					<li><%=link_to '公司簡介', about_path %></li>
+																					<li><%=link_to '公司沿革', history_path %></li>
+																				</ul>
+																			</div><!-- end box -->
+																		</div><!-- end col -->
+																	</div>
+																</div>
+															</li>
+														</ul>
 														<li class="dropdown yamm-fw">
-															<%=link_to '產品介紹', product_path %>
+															<%=link_to '產品介紹', products_path %>
 														</li>
 														<li class="dropdown yamm-fw">
 															<%=link_to '最新消息', posts_path %>

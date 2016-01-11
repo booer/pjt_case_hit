@@ -18,3 +18,4 @@
 
 #add
 /config/secrets.yml
+/config/routes.rb
