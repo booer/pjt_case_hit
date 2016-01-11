@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	def about
-		
+		@page = Page.find(1)
+		@aimgs = AboutImage.all
 	end
 	def wellcome
 		

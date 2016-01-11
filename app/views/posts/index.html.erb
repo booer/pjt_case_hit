@@ -1,86 +1,28 @@
-<<<<<<< HEAD
 <section class="section white">
 	<div class="container">
 		<div id="page-wrapper" class="row">
 			<div id="content" class="col-md-12 col-sm-12 col-xs-12">
-				<% @posts.each do |e| %>
-				<div class="blog-wrapper">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="media-element">
-								<iframe src="https://player.vimeo.com/video/133547455?color=ffffff&title=0&byline=0&portrait=0" width="500" height="281"></iframe>
-							</div><!-- end blog-image -->
-						</div><!-- end col -->
-					</div>
-					<div class="row">
-						<div class="col-md-2 col-sm-2 col-xs-12">
-							<div class="blog-time">
-								<h3>9</h3>
-								<p>May, 2014</p>
-							</div><!-- blog-time -->
-						</div><!-- end col -->
-						<div class="col-md-10 col-sm-10 col-xs-12 nopadleft">
-							<div class="blog-title">
-								<h4>
-									<%= link_to e.title, post_path(e) %></h4>
-								<div class="blog-meta">
-									<span><a href="#"><i class="fa fa-user"></i> Author : Begha</a></span>
-									<span><a href="#"><i class="fa fa-folder-open"></i> Category : Photography</a></span>
-									<span><a href="#"><i class="fa fa-heart"></i> 13</a></span>
-									<span><a href="#"><i class="fa fa-comment"></i> 22 Comments</a></span>
-								</div><!-- end blog-meta -->
-								<p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. </p>
-								<span class="read_more">
-									<%= link_to 'Read More', post_path('1'), class: 'btn btn-dark btn-xs' %>
-								</span>
-							</div><!-- end blog-title -->
-						</div><!-- end col -->
-					</div><!-- end row -->
-				</div><!-- end blog-wrapper -->
-				<% end %>
+
 				<div class="row">
-				<nav class="col-md-12">
-				  	<ul class="pagination">
-					    <li><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-				  	</ul>
-				</nav>
-				</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="blog-list blog-style-2">
+							<div class="blog-image">
+								<img src="upload/blog_06.jpg" alt="">
+								<div class="blog-time">
+									<h3>18</h3>
+									<p>May, 2014</p>
+								</div><!-- blog-time -->
+							</div><!-- end blog-image -->
+							<div class="blog-title">
+								<h4><a href="blog-single-rs.html">Blog Tiltle Shall Be Here !</a></h4>
 
-			</div><!-- end content -->
-		</div><!-- end row -->
-	</div><!-- end container -->
-</section><!-- end section -->
-=======
-		<section class="section white">
-			<div class="container">
-				<div id="page-wrapper" class="row">
-					<div id="content" class="col-md-12 col-sm-12 col-xs-12">
-
-						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-12">
-								<div class="blog-list blog-style-2">
-									<div class="blog-image">
-										<img src="upload/blog_06.jpg" alt="">
-										<div class="blog-time">
-											<h3>18</h3>
-											<p>May, 2014</p>
-										</div><!-- blog-time -->
-									</div><!-- end blog-image -->
-									<div class="blog-title">
-										<h4><a href="blog-single-rs.html">Blog Tiltle Shall Be Here !</a></h4>
-
-										<p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis vitae velit isneque dictum blandit Proin.</p>
-									</div><!-- end blog-title -->
-								</div><!-- end bloglist -->
-							</div><!-- end col -->
-						</div>
-					</div>
+								<p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis vitae velit isneque dictum blandit Proin.</p>
+							</div><!-- end blog-title -->
+						</div><!-- end bloglist -->
+					</div><!-- end col -->
 				</div>
 			</div>
-		</section>
-	    <div class="backtotop">Scroll to Top</div>
->>>>>>> d874bec971fe5b357642bd676a28401df046b804
+		</div>
+	</div>
+</section>
+<div class="backtotop">Scroll to Top</div>
