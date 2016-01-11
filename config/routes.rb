@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'wellcome', to: 'pages#wellcome'
   get 'contact', to: 'pages#contact'
   get 'index' , to: 'pages#index'
-  get 'product' , to: 'pages#product'
+  get 'history' , to: 'pages#history'
   resources :posts
   resources :products
 
