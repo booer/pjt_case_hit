@@ -1,6 +1,6 @@
 class Admin::ProductsController < Admin::BaseController
 	def index
-		@products = Product.all		
+		@products = Product.all
 	end
 	def new
 		@product = Product.new
@@ -36,6 +36,6 @@ class Admin::ProductsController < Admin::BaseController
 	
 	private
 	def product_params
-		params.require(:product).permit(:pname, :desc, :feature, :detail, :image, finalimgs_attributes: [:id, :imga, :imgb, :imgc, :imgd])
+		params.require(:product).permit(:pname, :desc, :feature, :detail, :imagea, :imageb, :imagec, :imaged, finalimgs_attributes: [:id, :imga, :imgb, :imgc, :imgd])
 	end
 end	

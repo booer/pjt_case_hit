@@ -4,8 +4,8 @@
   <div class="mainpanel">
     <div class="contentpanel">
       <%= bootstrap_form_for [:admin, @page] do |e| %>
-        <%= e.text_field :page_cn, class: 'redactor form-control', :placeholder => "Place content Here!", id: "redactor"%>
-        <%= e.text_field :page_en, class: 'redactor form-control', :placeholder => "Place content Here!", id: "redactor"%>
+        <%= e.text_field :page_cn, label: '中文版' %>
+        <%= e.text_field :page_en, label: '英文版' %>
         <%= e.submit '送出' %>
       <% end %>
       <!-- content goes here... -->

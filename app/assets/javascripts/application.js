@@ -12,11 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets
-//= require "bootstrap"
-//= require "bootstrap/modal"
-//= require "bootstrap/dropdown"
-//= require "quirk"
 //= require "redactor-rails"
+//= require "bootstrap"
+//= require "quirk"

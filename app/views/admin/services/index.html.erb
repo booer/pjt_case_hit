@@ -22,7 +22,11 @@
                 <tr>
                   <td><%= f.title %></td>
                   <td><%= f.desc %></td>
-                  <td><%= f.lang %></td>
+                  <% if f.lang.present? %>
+                    <td>中文</td>
+                  <% else %>
+                    <td>英文</td>
+                  <% end %>
                   <td>
                     <ul class="table-options">
                       <li>

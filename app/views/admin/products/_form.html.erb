@@ -12,6 +12,11 @@
 		<div class="form-group">
 			<%= e.text_area :detail, label: '商品說明' %>
 		</div>
+		<%= e.file_field :imagea, label: '商品輪播圖' %>
+		<%= e.file_field :imageb, label: '商品輪播圖' %>
+		<%= e.file_field :imagec, label: '商品輪播圖' %>
+		<%= e.file_field :imaged, label: '商品輪播圖' %>
+
 	</div>
 	<div class="panel-body col-md-6">
 	  <div class="form-group">
@@ -26,19 +31,12 @@
 		<div class="form-group">
 			<%= e.text_area :detail_en, label: '商品說明(英)' %>
 		</div>
+		<%= e.fields_for :finalimgs do |f| %>
+		    <%= f.file_field :imga, label: '完成圖1' %>
+		    <%= f.file_field :imgb, label: '完成圖2' %>
+		    <%= f.file_field :imgc, label: '完成圖3' %>
+		    <%= f.file_field :imgd, label: '完成圖4' %>
+		<% end %>
 	</div>
-	<div class="panel-body">
-		<div class="form-group">
-		 	<div class="form-group">
-				 <%= e.file_field :image, label: '商品圖片' %>
-			</div>
-			<%= e.fields_for :finalimgs do |f| %>
-			    <%= f.file_field :imga, label: '完成圖1' %>
-			    <%= f.file_field :imgb, label: '完成圖1' %>
-			    <%= f.file_field :imgc, label: '完成圖1' %>
-			    <%= f.file_field :imgd, label: '完成圖1' %>
-			<% end %>
-		</div>
-		<%= e.submit '送出' %>
-	</div
+	<%= e.submit '送出' %>
 <% end %>

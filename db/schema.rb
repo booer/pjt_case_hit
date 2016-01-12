@@ -62,7 +62,10 @@ ActiveRecord::Schema.define(version: 20160110072911) do
     t.text     "desc_en"
     t.text     "detail_en"
     t.text     "feature_en"
-    t.string   "image"
+    t.string   "imagea"
+    t.string   "imageb"
+    t.string   "imagec"
+    t.string   "imaged"
     t.boolean  "lang",       default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false

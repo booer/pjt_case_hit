@@ -25,7 +25,11 @@
               <tbody>
                 <% @posts.each do |f| %>
                 <tr>
-                  <td><%= f.lang %></td>
+                  <% if f.lang.present? %>
+                    <td>中文</td>
+                  <% else %>
+                    <td>英文</td>
+                  <% end %>
                   <% if f.image.blank? %>
                     <td></td>
                   <% else %>

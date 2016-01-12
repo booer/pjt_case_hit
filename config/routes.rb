@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get '/auth/:provider/callback', to: 'sessions#create'
   
+  get 'history' , to: 'pages#history'
   get 'about', to: 'pages#about'
-  get 'wellcome', to: 'pages#wellcome'
   get 'contact', to: 'pages#contact'
   get 'index' , to: 'pages#index'
-  get 'history' , to: 'pages#history'
   resources :posts
   resources :products
 

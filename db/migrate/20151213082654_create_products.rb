@@ -9,7 +9,10 @@ class CreateProducts < ActiveRecord::Migration
       t.text :desc_en
       t.text :detail_en
       t.text :feature_en
-      t.string :image
+      t.string :imagea
+      t.string :imageb
+      t.string :imagec
+      t.string :imaged
 
       t.boolean :lang, default: '0', null: false
 
