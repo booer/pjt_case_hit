@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 	def index
 		@aimgs = AboutImage.all
 		@posts = Post.all
+		@srvs = Service.where(lang: true)
 	end
 	# get /about
 	def about
