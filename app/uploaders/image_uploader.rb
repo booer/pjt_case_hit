@@ -17,25 +17,25 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :image_s do
-    process :resize_to_fit => [50, 50]
+    process :resize_to_limit => [50, 50]
   end
   version :post_s do
-    process :resize_to_fit => [360, 360]
+    process :resize_to_limit => [360, 360]
   end
   version :post_banner do
-    process :resize_to_fit => [750, 285]
+    process :resize_to_limit => [750, 285]
   end
   version :product_list_s do
-    process :resize_to_fit => [350, 350]
+    process :resize_to_limit => [350, 350]
   end
   version :info_banner do
-    process :resize_to_fit => [750, 575]
+    process :resize_to_limit => [750, 575]
   end  
   version :info_r do
-    process :resize_to_fit => [263, 263]
+    process :resize_to_limit => [263, 263]
   end
   version :page do
-    process :resize_to_fit => [555, 340]
+    process :resize_to_limit => [555, 340]
   end
 
 end
