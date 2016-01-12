@@ -14,7 +14,8 @@ class PagesController < ApplicationController
 	end
 	
 	def history
-
+		@page = Page.find(2)
+		@aimgs = AboutImage.all
 	end
 
 end

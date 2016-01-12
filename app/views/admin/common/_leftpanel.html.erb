@@ -19,11 +19,11 @@
       <div class="tab-pane active" id="mainmenu">
         <h5 class="sidebar-title">靜態頁面</h5>
         <ul class="nav nav-pills nav-stacked nav-quirk">
-          <li>
-            <%= link_to admin_about_images_path do %><i class="fa fa-cube"></i> <span>首頁橫幅</span><% end %>
-          </li>
           <li class="nav-parent active"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
             <ul class="children">
+              <li>
+                <%= link_to '頁面輪播圖', admin_about_images_path %>
+              </li>
               <li> <%= link_to '關於我們', edit_admin_page_path('1')  %></li>
               <li> <%= link_to '公司沿革', edit_admin_page_path('2')  %></li>
               <li> <%= link_to '站台設定', edit_admin_site_path('1')  %></li>
