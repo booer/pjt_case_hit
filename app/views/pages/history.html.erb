@@ -15,11 +15,11 @@
 							<% @aimgs.each do |f| %>
 								<% if f.id == 1  %>
 									<div class="item active">
-										<%= image_tag f.image_url(:info_r).to_s, class: 'img-responsive' %>
+										<%= image_tag f.image_url(:page).to_s, class: 'img-responsive' %>
 									</div>
 								<% else %>
 									<div class="item">
-										<%= image_tag f.image_url(:info_r).to_s, class: 'img-responsive' %>
+										<%= image_tag f.image_url(:page).to_s, class: 'img-responsive' %>
 									</div>
 								<% end %>
 							<% end %>
