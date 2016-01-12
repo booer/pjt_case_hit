@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
 	def show
 		@product = Product.find(params[:id])
-		@relation_pdt = @product.finalimgs.find(params[:id])
+		@relation_pdt = @product.finalimgs.find_by(product_id: params[:id])
 	end
 
 end
