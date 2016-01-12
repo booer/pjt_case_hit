@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 	# get /index
 	def index
 		@aimgs = AboutImage.all
+		@posts = Post.all
 	end
 	# get /about
 	def about

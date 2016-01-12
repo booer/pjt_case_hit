@@ -4,22 +4,24 @@
 			<div id="content" class="col-md-12 col-sm-12 col-xs-12">
 
 				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="blog-list blog-style-2">
-							<div class="blog-image">
-								<img src="upload/blog_06.jpg" alt="">
-								<div class="blog-time">
-									<h3>18</h3>
-									<p>May, 2014</p>
-								</div><!-- blog-time -->
-							</div><!-- end blog-image -->
-							<div class="blog-title">
-								<h4><a href="blog-single-rs.html">Blog Tiltle Shall Be Here !</a></h4>
+					<% @posts.each do |f| %>
+						<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="blog-list blog-style-2">
+								<div class="blog-image">
+									<%= image_tag f.image_url(:info_r).to_s %>
+									<div class="blog-time">
+										<h3>18</h3>
+										<p>May, 2014</p>
+									</div><!-- blog-time -->
+								</div><!-- end blog-image -->
+								<div class="blog-title">
+									<h4><%= link_to f.title, post_path(f) %></a></h4>
 
-								<p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis vitae velit isneque dictum blandit Proin.</p>
-							</div><!-- end blog-title -->
-						</div><!-- end bloglist -->
-					</div><!-- end col -->
+									<p><%= f.content %></p>
+								</div><!-- end blog-title -->
+							</div><!-- end bloglist -->
+						</div><!-- end col -->
+					<% end %>
 				</div>
 			</div>
 		</div>

@@ -51,239 +51,40 @@
 <section class="section grey box-shadow nopadbot">	
 	<div class="container">
 		<div class="section-title text-center">
-			<h4>Our Portfolio</h4>
+			<h4>最新消息</h4>
 			<hr>
-			<p>Latest Awesome & Creative Works</p>
+			<!-- <p>Latest Awesome & Creative Works</p> -->
 		</div><!-- end title -->
 	</div><!-- end container -->
 
 	<div class="row">
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-				<img src="upload/pm_01.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
+		<% @posts.each do |f| %>
+			<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
+				<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+					<%= image_tag f.image_url(:info_r).to_s %>
+					<div class="magnifier">
+						<div class="visible-title">
+							<h4><%= f.title %></h4>
+						</div><!-- end visible-title -->
 
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_01.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-				<img src="upload/pm_02.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_02.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-				<img src="upload/pm_03.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_03.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-				<img src="upload/pm_04.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_04.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-				<img src="upload/pm_05.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_05.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-				<img src="upload/pm_06.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_06.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-				<img src="upload/pm_07.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_07.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-				<img src="upload/pm_08.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_08.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-				<img src="upload/pm_09.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_09.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
-
-		<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-			<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-				<img src="upload/pm_10.png" alt="">
-				<div class="magnifier">
-					<div class="visible-title">
-						<h4><a href="portfolio-single-1.html">Project Name</a></h4>
-						<small><a href="portfolio-gallery-wd-rs-3.html">Category</a></small>
-					</div><!-- end visible-title -->
-
-					<div class="visible-title1 clearfix">
-						<span class="pull-left">
-							<a data-rel="prettyPhoto" href="upload/portfolio_10.png"><i class="fa fa-search"></i></a>
-							<a href="portfolio-gallery-wd-rs-3.html"><i class="fa fa-link"></i></a>
-						</span>
-						<span class="pull-right">
-							<a href="#"><i class="fa fa-heart"></i> 300</a>
-						</span>
-					</div><!-- end visible-title -->
-				</div><!-- end magnifier -->
-			</div><!-- end portfolio -->
-		</div>
+						<div class="visible-title1 clearfix">
+							<span class="pull-left">
+								<%= link_to post_path(f) do %>
+									<i class="fa fa-link"></i>
+								<% end %>
+							</span>
+						</div><!-- end visible-title -->
+					</div><!-- end magnifier -->
+				</div><!-- end portfolio -->
+			</div>
+		<% end %>
 	</div><!-- end row -->
 </section><!-- end section -->
 
 <section class="section white">
 	<div class="container">
 		<div class="section-title text-center">
-			<h4>Ova Services</h4>
+			<h4>服務項目</h4>
 			<hr>
 			<p>Awesome & Great Services Done With Love</p>
 		</div><!-- end title -->
