@@ -2,7 +2,6 @@ class PagesController < ApplicationController
 	# get /index
 	def index
 		@aimgs = AboutImage.all
-		@posts = Post.all
 		@srvs = Service.where(lang: true)
 	end
 	# get /about

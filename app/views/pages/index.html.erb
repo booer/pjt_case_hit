@@ -48,38 +48,6 @@
 		</div>
 	</div>
 </section>
-<section class="section grey box-shadow nopadbot">	
-	<div class="container">
-		<div class="section-title text-center">
-			<h4>最新消息</h4>
-			<hr>
-			<!-- <p>Latest Awesome & Creative Works</p> -->
-		</div><!-- end title -->
-	</div><!-- end container -->
-
-	<div class="row">
-		<% @posts.each do |f| %>
-			<div class="col-md-15 col-sm-6 col-xs-12 nopadding">
-				<div class="portfolio-style-1 entry wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-					<%= image_tag f.image_url(:home_p).to_s %>
-					<div class="magnifier">
-						<div class="visible-title">
-							<h4><%= f.title %></h4>
-						</div><!-- end visible-title -->
-
-						<div class="visible-title1 clearfix">
-							<span class="pull-left">
-								<%= link_to post_path(f) do %>
-									<i class="fa fa-link"></i>
-								<% end %>
-							</span>
-						</div><!-- end visible-title -->
-					</div><!-- end magnifier -->
-				</div><!-- end portfolio -->
-			</div>
-		<% end %>
-	</div><!-- end row -->
-</section><!-- end section -->
 
 <section class="section white">
 	<div class="container">
