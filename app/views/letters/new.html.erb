@@ -12,6 +12,9 @@
 					<div id="message"></div>
 					<%= bootstrap_form_for @letter do |f| %>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<%= f.text_field :personal_name, label: '姓名', class: 'form-control', placeholder: '輸入您的姓名' %>
+						</div>				
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<%= f.text_field :company_name, label: '公司名稱', class: 'form-control', placeholder: '輸入公司名稱' %>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -68,5 +71,4 @@
 </section><!-- end section -->
 
 <section class="framesection">
-	<div id="map"></div>
 </section><!-- end framesection -->
