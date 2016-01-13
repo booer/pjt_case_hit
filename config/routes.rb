@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   
   get 'history' , to: 'pages#history'
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'letters#new'
   get 'index' , to: 'pages#index'
   resources :posts
+  resources :letters
   resources :products
 
   namespace :admin do

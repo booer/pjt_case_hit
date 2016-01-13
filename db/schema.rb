@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110072911) do
+ActiveRecord::Schema.define(version: 20160113025445) do
 
   create_table "about_images", force: :cascade do |t|
     t.integer  "page"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20160110072911) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "letters", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "company_address"
+    t.string   "mail"
+    t.string   "tel"
+    t.text     "msg"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "pages", force: :cascade do |t|

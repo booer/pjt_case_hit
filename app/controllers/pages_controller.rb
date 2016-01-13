@@ -9,10 +9,6 @@ class PagesController < ApplicationController
 		@page = Page.find(1)
 		@aimgs = AboutImage.all
 	end
-	def contact
-		
-	end
-	
 	def history
 		@page = Page.find(2)
 		@aimgs = AboutImage.all
